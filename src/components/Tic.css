@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+}
+.tic {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+}
+.clearfix::after {
+  clear: both;
+}
+header {
+  margin-bottom: 10px;
+}
+h1 {
+  font-size: 65px;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  text-align: center;
+  color: #2c3e50;
+  margin: 0;
+  font-weight: 600;
+}
+.spot-row {
+  display: table;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0;
+}
+.spot {
+  display: table-cell;
+  float: left;
+  width: 150px;
+  height: 150px;
+  background: #34495e;
+  margin: 5px 5px;
+}
+
+.flip-x {
+  transition: all ease-in-out 0.35s;
+  transform: rotateY(180deg);
+  background: #3498db;
+}
+.flip-o {
+  transition: all ease-in-out 0.35s;
+  transform: rotateY(180deg);
+  background: #e74c3c;
+}
+
+.spot-x::after {
+  content: "X";
+  color: #fff;
+  font-size: 70px;
+  text-align: center;
+  line-height: 150px;
+  font-weight: 800;
+}
+.spot-o::after {
+  content: "O";
+  color: #fff;
+  font-size: 70px;
+  text-align: center;
+  line-height: 150px;
+  font-weight: 800;
+}
+
+.score .player-1 {
+  float: left;
+  color: #3498db;
+  font-size: 24px;
+  font-weight: 400;
+  text-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+.score .player-2 {
+  float: right;
+  color: #e74c3c;
+  font-size: 24px;
+  font-weight: 400;
+  text-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+.score h2 span {
+  font-weight: 800;
+}
+
+.game-over {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.75);
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+}
+.game-over h1 {
+  color: #c0392b;
+  line-height: 600px;
+  text-align: center;
+  letter-spacing: 15px;
+  font-weight: 800;
+}
